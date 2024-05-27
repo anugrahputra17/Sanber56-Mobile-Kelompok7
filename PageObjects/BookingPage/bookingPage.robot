@@ -11,6 +11,8 @@ ${locator_class}    xpath=//android.widget.Spinner[@resource-id="com.example.mya
 ${SPINNER_from}    xpath=//android.widget.TextView[@resource-id="android:id/text1" and @text="New York"]
 ${SPINNER_to}    xpath=//android.widget.TextView[@resource-id="android:id/text1" and @text="London"]
 ${SPINNER_class}    xpath=//android.widget.TextView[@resource-id="android:id/text1" and @text="Economy"]
+${DATE_FIELD}    xpath=//android.widget.EditText[@resource-id='com.example:id/date_field']
+${OK_BUTTON}     xpath=//android.widget.Button[@text='OK']
 
 *** Keywords ***
 Click book Button On dashboard Screen
@@ -23,13 +25,31 @@ Select Spinner from city Value
     Click Element    ${SPINNER_from}
 
 Select Spinner to city Value
-    [Arguments]    ${locator_to}    ${SPINNER_VALUE}
+    [Arguments]    ${locator_to}    ${SPINNER_to}
     Click Element    ${locator_to}
-    Wait Until Element Is Visible    ${SPINNER_VALUE}    
-    Click Element    ${SPINNER_VALUE}
+    Wait Until Element Is Visible    ${SPINNER_to}    
+    Click Element    ${SPINNER_to}
 
 Select Spinner class Value
-    [Arguments]    ${locator_class}    ${SPINNER_VALUE}
+    [Arguments]    ${locator_class}    ${SPINNER_class}
     Click Element    ${locator_class}
-    Wait Until Element Is Visible    ${SPINNER_VALUE}    
-    Click Element    ${SPINNER_VALUE}
+    Wait Until Element Is Visible    ${SPINNER_class}    
+    Click Element    ${SPINNER_class}
+
+Select start date Value
+    [Arguments]    ${locator_class}    ${SPINNER_class}
+    Click Element    ${locator_class}
+    Wait Until Element Is Visible    ${SPINNER_class}    
+    Click Element    ${SPINNER_class}
+
+Select end date Value
+    [Arguments]    ${locator_class}    ${SPINNER_class}
+    Click Element    ${locator_class}
+    Wait Until Element Is Visible    ${SPINNER_class}    
+    Click Element    ${SPINNER_class}
+
+Set Date
+    [Arguments]    ${locator}    ${date}
+    Click Element    ${locator}
+    Set Date   ${date}
+    Click Element    ${OK_BUTTON}

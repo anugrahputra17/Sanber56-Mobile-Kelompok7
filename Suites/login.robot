@@ -24,4 +24,8 @@ User Should Be Able To Login With Valid Credential
     Click book Button On dashboard Screen
     Wait Until Element Is Visible    ${locator_from}    
     Select Spinner from city Value    ${locator_from}    ${SPINNER_from}
+    Select Spinner to city Value    ${locator_to}    ${SPINNER_to}
+    Select Spinner class Value    ${locator_class}    ${SPINNER_class}
+    Wait Until Element Is Visible    ${DATE_FIELD}    timeout=10s
+    Set Date    ${DATE_FIELD}    2024-06-15
 
