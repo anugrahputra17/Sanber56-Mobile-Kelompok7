@@ -11,8 +11,9 @@ ${locator_class}    xpath=//android.widget.Spinner[@resource-id="com.example.mya
 ${SPINNER_from}    xpath=//android.widget.TextView[@resource-id="android:id/text1" and @text="New York"]
 ${SPINNER_to}    xpath=//android.widget.TextView[@resource-id="android:id/text1" and @text="London"]
 ${SPINNER_class}    xpath=//android.widget.TextView[@resource-id="android:id/text1" and @text="Economy"]
-${DATE_FIELD}    xpath=//android.widget.EditText[@resource-id='com.example:id/date_field']
-${OK_BUTTON}     xpath=//android.widget.Button[@text='OK']
+${start_date}    2019-08-02
+${end_date}    2019-08-09
+${OK_BUTTON}     xpath=//android.widget.Button[@resource-id="com.example.myapplication:id/book_flight"]
 
 *** Keywords ***
 Click book Button On dashboard Screen
@@ -36,20 +37,22 @@ Select Spinner class Value
     Wait Until Element Is Visible    ${SPINNER_class}    
     Click Element    ${SPINNER_class}
 
-Select start date Value
-    [Arguments]    ${locator_class}    ${SPINNER_class}
-    Click Element    ${locator_class}
-    Wait Until Element Is Visible    ${SPINNER_class}    
-    Click Element    ${SPINNER_class}
+Fill Start Date
+    Click Element    locator=//android.widget.TextView[@resource-id="com.example.myapplication:id/textStartDate"]  
+    Click Element    locator=//android.widget.Button[@resource-id="android:id/button1"]
 
-Select end date Value
-    [Arguments]    ${locator_class}    ${SPINNER_class}
-    Click Element    ${locator_class}
-    Wait Until Element Is Visible    ${SPINNER_class}    
-    Click Element    ${SPINNER_class}
+Fill End Date
+    Click Element    locator=//android.widget.TextView[@resource-id="com.example.myapplication:id/textEndDate"]   
+    Click Element    xpath=//android.widget.Button[@resource-id="android:id/button1"]
 
-Set Date
-    [Arguments]    ${locator}    ${date}
-    Click Element    ${locator}
-    Set Date   ${date}
-    Click Element    ${OK_BUTTON}
+select radio Button
+    Click Element    locator=//android.widget.RadioButton[@resource-id="com.example.myapplication:id/radioButtonFlight"]
+
+Click button book
+    Click Element    locator=//android.widget.Button[@resource-id="com.example.myapplication:id/book_flight"]
+
+Click button price
+    Click Element    locator=//android.widget.Button[@resource-id="com.example.myapplication:id/price1"]
+
+Click button confirm
+    Click Element    locator=//android.widget.Button[@resource-id="com.example.myapplication:id/confirm_order"]

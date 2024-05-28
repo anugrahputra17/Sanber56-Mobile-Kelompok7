@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation                Open application, close application, etc
 Library    AppiumLibrary
+Library    DateTime
 
 
 *** Variables ***
