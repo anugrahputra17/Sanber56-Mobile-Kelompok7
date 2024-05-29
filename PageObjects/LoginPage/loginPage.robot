@@ -28,3 +28,4 @@ Login With Valid Credential
     Input Username                       username=${username}
     Input User Password                  password=${password}
     Click Sign In Button On Login Screen
+    Verify Success Login

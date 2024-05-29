@@ -32,7 +32,7 @@ User Should Be Able To Book With Valid Data
     Click button book
     Click button price
     Click button confirm
-    Veriy Success Book
+    Verify Success Book
 
 User Should Be Able To Book With empty date 
     [Tags]       TC-002    negative 
@@ -51,7 +51,7 @@ User Should Be Able To Book With empty date
     Click button book
     Click button price
     Click button confirm
-    Veriy Success Book
+    Verify Success Book
 
 User Should Be Able To Book With empty radio button
     [Tags]       TC-003    negative
@@ -71,7 +71,7 @@ User Should Be Able To Book With empty radio button
     Click button book
     Click button price
     Click button confirm
-    Veriy Success Book
+    Verify Success Book
 
 User Should Be Able To Book With not choose price
     [Tags]       TC-004   negative
@@ -91,7 +91,7 @@ User Should Be Able To Book With not choose price
     select radio Button
     Click button book
     Click button confirm
-    Veriy Success Book
+    Verify Success Book
 
 User Should Be Able To Book With radio button and checkbox
     [Tags]       TC-005    positif
@@ -112,4 +112,4 @@ User Should Be Able To Book With radio button and checkbox
     Click button book
     Click button price
     Click button confirm
-    Veriy Success Book
+    Verify Success Book
