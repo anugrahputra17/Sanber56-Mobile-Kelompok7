@@ -39,7 +39,8 @@ Select Spinner class Value
 
 Fill Start Date
     Click Element    locator=//android.widget.TextView[@resource-id="com.example.myapplication:id/textStartDate"]  
-    Click Element    locator=//android.widget.Button[@resource-id="android:id/button1"]
+    Wait Until Element Is Visible    xpath=//android.widget.Button[@resource-id="android:id/button1"]
+    Click Element    xpath=//android.widget.Button[@resource-id="android:id/button1"]
 
 Fill End Date
     Click Element    locator=//android.widget.TextView[@resource-id="com.example.myapplication:id/textEndDate"]   
@@ -47,11 +48,13 @@ Fill End Date
 
 select radio Button
     Click Element    locator=//android.widget.RadioButton[@resource-id="com.example.myapplication:id/radioButtonFlight"]
+    Click Element    locator=//android.widget.CheckBox[@resource-id="com.example.myapplication:id/checkBoxDay"]
 
 Click button book
     Click Element    locator=//android.widget.Button[@resource-id="com.example.myapplication:id/book_flight"]
 
 Click button price
+    Wait Until Element Is Visible    xpath=//android.widget.Button[@resource-id="com.example.myapplication:id/price1"]
     Click Element    locator=//android.widget.Button[@resource-id="com.example.myapplication:id/price1"]
 
 Click button confirm

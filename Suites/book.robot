@@ -92,3 +92,24 @@ User Should Be Able To Book With not choose price
     Click button book
     Click button confirm
     Veriy Success Book
+
+User Should Be Able To Book With radio button and checkbox
+    [Tags]       TC-005    positif
+    Verify Home Screen Appears
+    Click Sign In Button On Home Screen
+    Input Username    username=${VALID_USERNAME}
+    Input User Password    password=${VALID_PASSWORD}
+    Click Sign In Button On Login Screen
+    Verify Success Login
+    Click book Button On dashboard Screen
+    Wait Until Element Is Visible    ${locator_from}    
+    Select Spinner from city Value    ${locator_from}    ${SPINNER_from}
+    Select Spinner to city Value    ${locator_to}    ${SPINNER_to}
+    Select Spinner class Value    ${locator_class}    ${SPINNER_class}
+    Fill Start Date    
+    Fill End Date 
+    select radio Button
+    Click button book
+    Click button price
+    Click button confirm
+    Veriy Success Book
